@@ -16,7 +16,8 @@ module memory_python_TB;
     // different inputs in the for loop 
     integer                 i           ;
   
-    mempy dut
+    // Instantiate the Unit Under Test (UUT)
+    memory_python dut
         (
             .address    (address)   ,
             .read_en    (read_en)   ,
