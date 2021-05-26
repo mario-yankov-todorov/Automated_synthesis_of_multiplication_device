@@ -5,7 +5,7 @@ module memory_python
     (
         input   [N      -1:0]       address     ,
         input                       read_en     ,
-        input                       ce          ,
+
         output  [N      -1:0]       data
     );
               
@@ -13,7 +13,7 @@ module memory_python
 
     integer file_pointer;
 
-    assign data = (ce && read_en) ? mem[address] : 0;
+    assign data = (read_en) ? mem[address] : 0;
 
     integer i;
   
